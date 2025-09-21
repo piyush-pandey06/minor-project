@@ -1,112 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Donation Matcher</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Donation Matcher</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <i class="fas fa-hand-holding-heart"></i> Smart Donation Matcher
-        </div>
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#login"><i class="fas fa-user"></i> Login</a></li>
-            <li><a href="#register"><i class="fas fa-user-plus"></i> Register</a></li>
-        </ul>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-hand-holding-heart"></i> Smart Donation Matcher
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="nav-item active" data-target="home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#" class="nav-item" data-target="login"><i class="fas fa-user"></i> Login</a></li>
+      <li><a href="#" class="nav-item" data-target="register"><i class="fas fa-user-plus"></i> Register</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to Smart Donation Matcher</h1>
-        <p>Connecting donors and receivers to make a difference. Whether you have items to give or are in need, our platform helps you find the perfect match.</p>
-        <div class="buttons">
-            <a href="#login" class="btn donate">Donate Now</a>
-            <a href="#register" class="btn request">Request Help</a>
-        </div>
-    </section>
+  <!-- Pages -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <h1>Welcome to Smart Donation Matcher</h1>
+      <p>Connecting donors and receivers to make a difference. Whether you have items to give or are in need, our platform helps you find the perfect match.</p>
+      <div class="buttons">
+        <a href="#" class="btn donate nav-item" data-target="login">Donate Now</a>
+        <a href="#" class="btn request nav-item" data-target="register">Request Help</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Login Section -->
-    <section id="login" class="auth-container">
-        <div class="auth-box">
-            <h2>Login</h2>
-            <form action="#" method="POST">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn">Login</button>
-            </form>
-            <p class="switch">Don’t have an account? <a href="#register">Register here</a></p>
-        </div>
-    </section>
+  <section id="login" class="page">
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p class="switch">Don’t have an account? <a href="#" class="nav-item" data-target="register">Register here</a></p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Register Section -->
-    <section id="register" class="auth-container">
-        <div class="auth-box">
-            <h2>Register</h2>
-            <form action="#" method="POST">
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email-reg">Email</label>
-                    <input type="email" id="email-reg" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password-reg">Password</label>
-                    <input type="password" id="password-reg" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn">Register</button>
-            </form>
-            <p class="switch">Already have an account? <a href="#login">Login here</a></p>
-        </div>
-    </section>
+  <section id="register" class="page">
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2>Register</h2>
+        <form action="#" method="POST">
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-group">
+            <label for="email-reg">Email</label>
+            <input type="email" id="email-reg" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-group">
+            <label for="password-reg">Password</label>
+            <input type="password" id="password-reg" name="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="switch">Already have an account? <a href="#" class="nav-item" data-target="login">Login here</a></p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Toggle Navbar on Mobile
-        const menuToggle = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
+  <script>
+    // Toggle Navbar on Mobile
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
 
-        // Smooth Scroll Active Class
-        const sections = document.querySelectorAll("section");
-        const navItems = document.querySelectorAll(".nav-links li a");
+    // Page Switching
+    const navItems = document.querySelectorAll(".nav-item");
+    const pages = document.querySelectorAll(".page");
 
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 80;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute("id");
-                }
-            });
+    navItems.forEach(item => {
+      item.addEventListener("click", e => {
+        e.preventDefault();
 
-            navItems.forEach(a => {
-                a.classList.remove("active");
-                if (a.getAttribute("href").includes(current)) {
-                    a.classList.add("active");
-                }
-            });
-        });
-    </script>
+        // Remove active from all links
+        document.querySelectorAll(".nav-links a").forEach(a => a.classList.remove("active"));
+
+        // Add active to clicked link
+        if (item.closest("ul")) {
+          item.classList.add("active");
+        }
+
+        // Hide all pages
+        pages.forEach(page => page.classList.remove("active"));
+
+        // Show target page
+        const target = item.getAttribute("data-target");
+        document.getElementById(target).classList.add("active");
+
+        // Close mobile menu
+        navLinks.classList.remove("show");
+      });
+    });
+  </script>
 </body>
-
 </html>
